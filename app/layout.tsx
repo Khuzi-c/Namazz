@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     template: '%s | Namazz',
   },
   metadataBase: new URL('https://namazz.khxzi.shop'),
+  verification: {
+    google: 'q8jNQzPQ2bVpDPsBa_8WFFVPk1XzqQCBWtRL9NdSTrQ',
+  },
   description: 'Track your daily prayers (Salah/Namaz), read the Holy Quran, and maintain your spiritual consistency with elegance. Features include prayer times, Qibla direction context, and progress analytics.',
   keywords: ['Namazz', 'Salah', 'Prayer Tracker', 'Islam', 'Muslim', 'Quran', 'Prayer Times', 'Salah Tracker', 'Islamic App', 'Ramadan'],
   authors: [{ name: 'Khxzi Devs' }],
@@ -65,9 +68,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'google-site-verification-code', // Placeholder
   },
 }
 
