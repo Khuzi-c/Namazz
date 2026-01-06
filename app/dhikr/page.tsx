@@ -36,8 +36,14 @@ export default function DhikrPage() {
     const increment = () => {
         const newCount = count + 1
         setCount(newCount)
-        if (vibrate && navigator.vibrate) {
-            // Strong vibration on goal, light otherwise
+
+        // Native Haptics (Median)
+        if (typeof window !== 'undefined' && (window as any).median?.haptics) {
+            if (newCount % goal === 0) (window as any).median.haptics.trigger({ style: 'notificationSuccess' });
+            else (window as any).median.haptics.trigger({ style: 'impactMedium' });
+        }
+        // Fallback Web API
+        else if (vibrate && navigator.vibrate) {
             if (newCount % goal === 0) navigator.vibrate(200)
             else navigator.vibrate(10)
         }
